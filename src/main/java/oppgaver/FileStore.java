@@ -50,13 +50,7 @@ public class FileStore {
         return readAllLinesSafe(file).size();
     }
 
-    public String peek(Path file) throws IOException {
-        List<String> lines = readAllLinesSafe(file);
-        if (lines.isEmpty()) return null;
-        return lines.get(0);
-    }
-
-    public String pop(Path file) throws IOException {
+      public String pop(Path file) throws IOException {
         List<String> lines = readAllLinesSafe(file);
         if (lines.isEmpty()) return null;
         String first = lines.remove(0);
@@ -64,13 +58,23 @@ public class FileStore {
         return first;
     }
 
+    public String peek(Path file) throws IOException {
+        List<String> lines = readAllLinesSafe(file);
+        if (lines.isEmpty()) {
+            return null;
+        }
+        return lines.get(0); // første linje = "toppen"
+    }
+
+
     public void push(Path file, String s) throws IOException {
         List<String> lines = readAllLinesSafe(file);
+
         if (!lines.isEmpty()) {
-            String existingFirst = lines.get(0);
-            if (existingFirst.compareTo(s) < 0) {
+            String top = lines.get(0);
+            if (top.compareTo(s) < 0) {
                 throw new IllegalStateException("Ulovlig push: kan ikke skrive '"+ s + "' til " + file.getFileName() +
-                        " fordi '" + existingFirst + "' kommer før den alfabetisk."
+                        " fordi '" + top + "' kommer før den alfabetisk."
                 );
             }
         }
@@ -79,13 +83,24 @@ public class FileStore {
     }
 
     public void move(Path from, Path to) throws IOException {
-        String s = pop(from);
+        String s = peek(from);
         if (s == null) {
             throw new IllegalStateException("Kan ikke flytte fra tom fil: " + from.getFileName());
         }
+        String toTop = peek(to);
+        if (toTop != null && toTop.compareTo(s) < 0) {
+            throw new IllegalStateException("Ulovlig move: kan ikke flytte '" + s + "' til " + to.getFileName() +
+                    " fordi '" + toTop + "' kommer før den alfabetisk.");
+        }
+
+        pop(from);
         push(to, s);
-        writeAllLines(file, lines);
     }
+
+    public void clear(Path file) throws IOException {
+        writeAllLines(file, new ArrayList<>());
+    }
+
 
     public Path passordFil() {
         return passordFil;
