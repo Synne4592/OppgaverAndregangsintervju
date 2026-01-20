@@ -1,0 +1,401 @@
+ts | lvl | reqid; uid; thread; comp; host; src - log
+2026-01-12T00:00:00.001Z | INFO | reqA1b2c3; 1001; main; auth; web-01; AuthCtrl.java:45 - User login successful
+2026-01-12T00:00:00.456Z | DEBUG | reqD4e5f6; 2002; worker-1; db; db-02; Database.java:112 - Executing query SELECT * FROM users WHERE id=2002  
+2026-01-12T00:00:00.899Z | WARN | reqG7h8i9; 3003; main; cache; cache-01; Cache.java:58 - Cache miss for key user:3003  
+2026-01-12T00:00:01.340Z | ERROR | reqJ0k1l2; 4004; worker-2; payment; pay-01; PaymentProc.java:210; err=E402; stack=java.lang.IllegalArgumentException: Invalid card number - Payment failed  
+2026-01-12T00:00:01.799Z | INFO | reqM3n4o5; 5005; main; order; web-02; OrderCtrl.java:77 - Order created orderId=O12345  
+2026-01-12T00:00:02.250Z | DEBUG | reqP6q7r8; 6006; worker-3; msgQueue; msg-01; Queue.java:33 - Enqueued message type=EmailRecipientId=6006  
+2026-01-12T00:00:02.705Z | INFO | reqS9t0u1; 7007; main; auth; web-01; AuthCtrl.java:48 - User logout successful  
+2026-01-12T00:00:03.150Z | WARN | reqV2w3x4; 8008; worker-1; apiGw; gw-01; Gateway.java:101 - Rate limit exceeded for IP 192.168.1.10  
+2026-01-12T00:00:03.599Z | ERROR | reqY5z6a7; 9009; main; storage; storage-01; FileStore.java:77; err=E501 - Disk write failed  
+2026-01-12T00:00:04.040Z | INFO | reqB8c9d0; 10010; worker-2; notify; notif-01; Notifier.java:44 - Notification sent channel=SMS  
+2026-01-12T00:00:04.489Z | DEBUG | reqE1f2g3; 11011; main; auth; web-01; TokenValidator.java:22 - Validating JWT token  
+2026-01-12T00:00:04.945Z | INFO | reqH4i5j6; 12012; worker-3; profile; profile-01; ProfileUpd.java:88 - Profile picture updated  
+2026-01-12T00:00:05.399Z | WARN | reqK7l8m9; 13013; main; cache; cache-01; Cache.java:62 - Cache eviction triggered size=1024  
+2026-01-12T00:00:05.844Z | ERROR | reqN0o1p2; 14014; worker-1; payment; pay-01; PaymentProc.java:215; err=E408; stack=java.net.SocketTimeoutException: Read timed out - Payment gateway timeout  
+2026-01-12T00:00:06.299Z | INFO | reqQ3r4s5; 15015; main; order; web-02; OrderCtrl.java:85 - Order shipped orderId=O12346  
+2026-01-12T00:00:06.745Z | DEBUG | reqT6u7v8; 16016; worker-2; analytics; analytics-01; Tracker.java:55 - Tracking event EVENT_LOGIN userId=16016  
+2026-01-12T00:00:07.199Z | INFO | reqW9x0y1; 17017; main; auth; web-01; AuthCtrl.java:52 - Password change successful  
+2026-01-12T00:00:07.644Z | WARN | reqZ2a3b4; 18018; worker-3; apiGw; gw-01; Gateway.java:108 - Backend returned 502 Bad Gateway  
+2026-01-12T00:00:08.099Z | ERROR | reqC5d6e7; 19019; main; db; db-02; Database.java:130; err=E503; stack=org.postgresql.util.PSQLException: Could not serialize access due to read/write conflict - Transaction rollback  
+2026-01-12T00:00:08.544Z | INFO | reqF8g9h0; 20020; worker-1; notify; notif-01; Notifier.java:48 - Email sent to user@example.com  
+2026-01-12T00:00:08.999Z | DEBUG | reqI1j2k3; 21021; main; cache; cache-01; Cache.java:70 - Refreshing cache entry key=user:21021  
+2026-01-12T00:00:09.444Z | INFO | reqL4m5n6; 22022; worker-2; profile; profile-01; ProfileUpd.java:95 - Updated user preferences  
+2026-01-12T00:00:09.899Z | WARN | reqO7p8q9; 23023; main; auth; web-01; AuthCtrl.java:60 - Multiple failed login attempts  
+2026-01-12T00:00:10.340Z | ERROR | reqR0s1t2; 24024; worker-3; payment; pay-01; PaymentProc.java:220; err=E403; stack=java.lang.RuntimeException: Insufficient funds - Payment declined  
+2026-01-12T00:00:10.795Z | INFO | reqU3v4w5; 25025; main; order; web-02; OrderCtrl.java:92 - Order cancelled orderId=O12347  
+2026-01-12T00:00:11.240Z | DEBUG | reqX6y7z8; 26026; worker-1; msgQueue; msg-01; Queue.java:45 - Dequeued message id=msg-1024  
+2026-01-12T00:00:11.685Z | INFO | reqA9b0c1; 27027; main; auth; web-01; AuthCtrl.java:66 - Two‑factor authentication succeeded  
+2026-01-12T00:00:12.130Z | WARN | reqD2e3f4; 28028; worker-2; apiGw; gw-01; Gateway.java:115; latencyMs=1250 - High latency detected  
+2026-01-12T00:00:12.575Z | ERROR | reqG5h6i7; 29029; main; storage; storage-01; FileStore.java:84; err=E502; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:00:13.020Z | INFO | reqJ8k9l0; 30030; worker-3; notify; notif-01; Notifier.java:52 - Push notification delivered deviceId=dev-30030  
+2026-01-12T00:00:13.465Z | DEBUG | reqM1n2o3; 31031; main; auth; web-01; TokenValidator.java:30 - Token signature verified  
+2026-01-12T00:00:13.910Z | INFO | reqP4q5r6; 32032; worker-1; profile; profile-01; ProfileUpd.java:102 - Updated email address  
+2026-01-12T00:00:14.355Z | WARN | reqS7t8u9; 33033; main; cache; cache-01; Cache.java:78 - Cache size approaching limit currentSize=9500 maxSize=10000  
+2026-01-12T00:00:14.800Z | ERROR | reqV0w1x2; 34034; worker-2; payment; pay-01; PaymentProc.java:225; err=E500; stack=java.lang.IllegalStateException: Gateway error - Payment gateway internal error  
+2026-01-12T00:00:15.245Z | INFO | reqY3z4a5; 35035; main; order; web-02; OrderCtrl.java:106 - Order delivered orderId=O12348  
+2026-01-12T00:00:15.690Z | DEBUG | reqB6c7d8; 36036; worker-3; analytics; analytics-01; Tracker.java:60 - Tracking event EVENT_PURCHASE userId=36036 amount=99.99  
+2026-01-12T00:00:16.135Z | INFO | reqE9f0g1; 37037; main; auth; web-01; AuthCtrl.java:72 - User password reset requested  
+2026-01-12T00:00:16.580Z | WARN | reqH2i3j4; 38038; worker-1; apiGw; gw-01; Gateway.java:122 - Backend service unavailable retrying  
+2026-01-12T00:00:17.025Z | ERROR | reqK5l6m7; 39039; main; db; db-02; Database.java:140; err=E504; stack=org.postgresql.util.PSQLException: deadlock detected - Deadlock detected  
+2026-01-12T00:00:17.470Z | INFO | reqN8o9p0; 40040; worker-2; notify; notif-01; Notifier.java:56 - SMS sent to +1234567890  
+2026-01-12T00:00:17.915Z | DEBUG | reqQ1r2s3; 41041; main; cache; cache-01; Cache.java:86 - Refreshing stale entry key=product:41041  
+2026-01-12T00:00:18.360Z | INFO | reqT4u5v6; 42042; worker-3; profile; profile-01; ProfileUpd.java:108 - Updated phone number  
+2026-01-12T00:00:18.805Z | WARN | reqW7x8y9; 43043; main; auth; web-01; AuthCtrl.java:78 - Suspicious login location detected  
+2026-01-12T00:00:19.250Z | ERROR | reqZ0a1b2; 44044; worker-1; payment; pay-01; PaymentProc.java:230; err=E405; stack=java.lang.SecurityException: Fraud suspect - Fraud detection triggered  
+2026-01-12T00:00:19.695Z | INFO | reqC3d4e5; 45045; main; order; web-02; OrderCtrl.java:112 - Order returned orderId=O12349  
+2026-01-12T00:00:20.140Z | DEBUG | reqF6g7h8; 46046; worker-2; msgQueue; msg-01; Queue.java:55 - Message re‑queued id=msg-2048 reason=Timeout  
+2026-01-12T00:00:20.585Z | INFO | reqI9j0k1; 47047; main; auth; web-01; AuthCtrl.java:84 - User session refreshed  
+2026-01-12T00:00:21.030Z | WARN | reqL2m3n4; 48048; worker-3; apiGw; gw-01; Gateway.java:129; latencyMs=2100 - High latency on service=inventory  
+2026-01-12T00:00:21.475Z | ERROR | reqO5p6q7; 49049; main; storage; storage-01; FileStore.java:98; err=E503; stack=java.io.IOException: No space left on device - Disk quota exceeded  
+2026-01-12T00:00:21.920Z | INFO | reqR8s9t0; 50050; worker-1; notify; notif-01; Notifier.java:60 - Email bounce detected recipient=user@example.com  
+2026-01-12T00:00:22.365Z | DEBUG | reqU1v2w3; 51051; main; auth; web-01; TokenValidator.java:38 - Token expiration checked, remainingMs=45000  
+2026-01-12T00:00:22.810Z | INFO | reqX4y5z6; 52052; worker-2; profile; profile-01; ProfileUpd.java:115 - Updated mailing address  
+2026-01-12T00:00:23.255Z | WARN | reqA7b8c9; 53053; main; cache; cache-01; Cache.java:94 - Cache cleanup started  
+2026-01-12T00:00:23.700Z | ERROR | reqD0e1f2; 54054; worker-3; payment; pay-01; PaymentProc.java:235; err=E406; stack=java.lang.IllegalArgumentException: Expired card - Card expired  
+2026-01-12T00:00:24.145Z | INFO | reqG3h4i5; 55055; main; order; web-02; OrderCtrl.java:118 - Order payment confirmed orderId=O12350  
+2026-01-12T00:00:24.590Z | DEBUG | reqJ6k7l8; 56056; worker-1; analytics; analytics-01; Tracker.java:65 - Tracking event EVENT_LOGOUT userId=56056  
+2026-01-12T00:00:25.035Z | INFO | reqM9n0o1; 57057; main; auth; web-01; AuthCtrl.java:90 - User deactivated account  
+2026-01-12T00:00:25.480Z | WARN | reqP2q3r4; 58058; worker-2; apiGw; gw-01; Gateway.java:136 - Service degradation detected  
+2026-01-12T00:00:25.925Z | ERROR | reqS5t6u7; 59059; main; db; db-02; Database.java:150; err=E505; stack=org.postgresql.util.PSQLException: Connection pool exhausted - Unable to acquire connection pool slot  
+2026-01-12T00:00:26.370Z | INFO | reqV8w9x0; 60060; worker-3; notify; notif-01; Notifier.java:64 - Push notification failed deviceId=dev-60060 err=E401 - Unauthorized push attempt  
+2026-01-12T00:00:26.815Z | DEBUG | reqY1z2a3; 61061; main; cache; cache-01; Cache.java:102 - Refreshed key=session:61061  
+2026-01-12T00:00:27.260Z | INFO | reqB4c5d6; 62062; worker-1; profile; profile-01; ProfileUpd.java:122 - Updated security questions  
+2026-01-12T00:00:27.705Z | WARN | reqE7f8g9; 63063; main; auth; web-01; AuthCtrl.java:96 - Multiple concurrent sessions detected  
+2026-01-12T00:00:28.150Z | ERROR | reqH0i1j2; 64064; worker-2; payment; pay-01; PaymentProc.java:240; err=E507; stack=java.lang.RuntimeException: Gateway internal error - Payment gateway internal error  
+2026-01-12T00:00:28.595Z | INFO | reqK3l4m5; 65065; main; order; web-02; OrderCtrl.java:124 - Order archived orderId=O12351  
+2026-01-12T00:00:29.040Z | DEBUG | reqN6o7p8; 66066; worker-3; msgQueue; msg-01; Queue.java:65 - Message dead‑lettered id=msg-4096 reason=ProcessingError  
+2026-01-12T00:00:29.485Z | INFO | reqQ9r0s1; 67067; main; auth; web-01; AuthCtrl.java:102 - User password changed  
+2026-01-12T00:00:29.930Z | WARN | reqT2u3v4; 68068; worker-1; apiGw; gw-01; Gateway.java:143; latencyMs=3400 - High latency on service=payment  
+2026-01-12T00:00:30.375Z | ERROR | reqW5x6y7; 69069; main; storage; storage-01; FileStore.java:112; err=E508; stack=java.io.FileNotFoundException: File not found - Unable to read file  
+2026-01-12T00:00:30.820Z | INFO | reqZ8a9b0; 70070; worker-2; notify; notif-01; Notifier.java:68 - Email sent to admin@example.com  
+2026-01-12T00:00:31.265Z | DEBUG | reqC1d2e3; 71071; main; auth; web-01; TokenValidator.java:45 - Token payload extracted  
+2026-01-12T00:00:31.710Z | INFO | reqF4g5h6; 72072; worker-3; profile; profile-01; ProfileUpd.java:129 - Updated language preference to 'nb'  
+2026-01-12T00:00:32.155Z | WARN | reqI7j8k9; 73073; main; cache; cache-01; Cache.java:110 - Cache entry TTL expired key=product:73073  
+2026-01-12T00:00:32.600Z | ERROR | reqL0m1n2; 74074; worker-1; payment; pay-01; PaymentProc.java:245; err=E509; stack=java.lang.IllegalStateException: Transaction already processed - Duplicate transaction error  
+2026-01-12T00:00:33.045Z | INFO | reqO3p4q5; 75075; main; order; web-02; OrderCtrl.java:130 - Order refund initiated orderId=O12352  
+2026-01-12T00:00:33.490Z | DEBUG | reqR6s7t8; 76076; worker-2; analytics; analytics-01; Tracker.java:70 - Tracking event EVENT_PROFILE_UPDATE userId=76076  
+2026-01-12T00:00:33.935Z | INFO | reqU9v0w1; 77077; main; auth; web-01; AuthCtrl.java:108 - User email verification sent  
+2026-01-12T00:00:34.380Z | WARN | reqX2y3z4; 78078; worker-3; apiGw; gw-01; Gateway.java:150; latencyMs=3000 - Backend latency spike  
+2026-01-12T00:00:34.825Z | ERROR | reqA5b6c7; 79079; main; db; db-02; Database.java:160; err=E510; stack=org.postgresql.util.PSQLException: Query timed out - Query timeout  
+2026-01-12T00:00:35.270Z | INFO | reqD8e9f0; 80080; worker-1; notify; notif-01; Notifier.java:72 - Push notification sent to deviceId=dev-80080  
+2026-01-12T00:00:35.715Z | DEBUG | reqG1h2i3; 81081; main; cache; cache-01; Cache.java:118 - Added new entry key=session:81081 ttl=60000  
+2026-01-12T00:00:36.160Z | INFO | reqJ4k5l6; 82082; worker-2; profile; profile-01; ProfileUpd.java:136 - Updated marketing opt‑in to true  
+2026-01-12T00:00:36.605Z | WARN | reqM7n8o9; 83083; main; auth; web-01; AuthCtrl.java:114 - Possible brute‑force attack detected  
+2026-01-12T00:00:37.050Z | ERROR | reqP0q1r2; 84084; worker-3; payment; pay-01; PaymentProc.java:250; err=E511; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:00:37.495Z | INFO | reqS3t4u5; 85085; main; order; web-02; OrderCtrl.java:130; carrier=UPS tracking=1Z999AA10123456784 - Order shipped via carrier=UPS  
+2026-01-12T00:00:37.940Z | DEBUG | reqV6w7x8; 86086; worker-1; msgQueue; msg-01; Queue.java:75 - Message processed id=msg-8192  
+2026-01-12T00:00:38.385Z | INFO | reqY9z0a1; 87087; main; auth; web-01; AuthCtrl.java:120 - User logout (session timeout)  
+2026-01-12T00:00:38.830Z | WARN | reqB2c3d4; 88088; worker-2; apiGw; gw-01; Gateway.java:157; circuitBreaker=opened service=inventory - Circuit breaker opened  
+2026-01-12T00:00:39.275Z | ERROR | reqE5f6g7; 89089; main; storage; storage-01; FileStore.java:126; err=E512; stack=java.io.IOException: Cross‑device link not permitted - Failed to move file  
+2026-01-12T00:00:39.720Z | INFO | reqH8i9j0; 90090; worker-3; notify; notif-01; Notifier.java:84 - SMS delivery failed phone=+1234567890 err=E402 - SMS send failure  
+2026-01-12T00:00:40.165Z | DEBUG | reqK1l2m3; 91091; main; auth; web-01; TokenValidator.java:52 - Token audience validated  
+2026-01-12T00:00:40.610Z | INFO | reqN4o5p6; 92092; worker-1; profile; profile-01; ProfileUpd.java:143 - Updated profile visibility to "friends"  
+2026-01-12T00:00:41.055Z | WARN | reqQ7r8s9; 93093; main; cache; cache-01; Cache.java:126 - Cache pressure high, evicting 200 entries  
+2026-01-12T00:00:41.500Z | ERROR | reqT0u1v2; 94094; worker-2; payment; pay-01; PaymentProc.java:255; err=E513; stack=java.lang.IllegalStateException: Order ID already exists - Duplicate order ID  
+2026-01-12T00:00:41.945Z | INFO | reqW3x4y5; 95095; main; order; web-02; OrderCtrl.java:136 - Order cancelled by user orderId=O12353  
+2026-01-12T00:00:42.390Z | DEBUG | reqZ6a7b8; 96096; worker-3; analytics; analytics-01; Tracker.java:75 - Tracking event EVENT_PASSWORD_CHANGE userId=96096  
+2026-01-12T00:00:42.835Z | INFO | reqC9d0e1; 97097; main; auth; web-01; AuthCtrl.java:126 - Password reset token generated  
+2026-01-12T00:00:43.280Z | WARN | reqF2g3h4; 98100; worker-1; apiGw; gw-01; Gateway.java:164; errorRate=high - High 5xx error rate detected  
+2026-01-12T00:00:43.725Z | ERROR | reqI5j6k7; 99101; main; db; db-02; Database.java:170; err=E514; stack=org.postgresql.util.PSQLException: deadlock detected - Deadlock during batch insert  
+2026-01-12T00:00:44.170Z | INFO | reqL8m9n0; 100102; worker-2; notify; notif-01; Notifier.java:88 - Email delivered to user100102@example.com  
+2026-01-12T00:00:44.615Z | DEBUG | reqO1p2q3; 101103; main; cache; cache-01; Cache.java:134 - Cache entry refreshed key=user:101103 ttl=300000  
+2026-01-12T00:00:45.060Z | INFO | reqR4s5t6; 102104; worker-3; profile; profile-01; ProfileUpd.java:150 - Updated newsletter subscription to false  
+2026-01-12T00:00:45.505Z | WARN | reqU7v8w9; 103105; main; auth; web-01; AuthCtrl.java:132 - Multiple failed OTP attempts  
+2026-01-12T00:00:45.950Z | ERROR | reqX0y1z2; 104106; worker-1; payment; pay-01; PaymentProc.java:260; err=E515; stack=java.lang.IllegalArgumentException: Unsupported method - Invalid payment method  
+2026-01-12T00:00:46.395Z | INFO | reqA3b4c5; 105107; main; order; web-02; OrderCtrl.java:142 - Order completed orderId=O12354  
+2026-01-12T00:00:46.840Z | DEBUG | reqD6e7f8; 106108; worker-2; msgQueue; msg-01; Queue.java:85 - Message acked id=msg-9216  
+2026-01-12T00:00:47.285Z | INFO | reqG9h0i1; 107109; main; auth; web-01; AuthCtrl.java:138 - User account locked due to policy  
+2026-01-12T00:00:47.730Z | WARN | reqJ2k3l4; 108110; worker-3; apiGw; gw-01; Gateway.java:171; status=504 - Backend service returned 504 Gateway Timeout  
+2026-01-12T00:00:48.175Z | ERROR | reqM5n6o7; 109111; main; storage; storage-01; FileStore.java:140; err=E516; stack=java.io.IOException: Compression failed - Unable to compress file  
+2026-01-12T00:00:48.620Z | INFO | reqP8q9r0; 110112; worker-1; notify; notif-01; Notifier.java:92 - Email sent to support@example.com  
+2026-01-12T00:00:49.065Z | DEBUG | reqS1t2u3; 111113; main; cache; cache-01; Cache.java:142 - Cache entry refreshed key=user:111113 ttl=300000  
+2026-01-12T00:00:49.510Z | INFO | reqV4w5x6; 112114; worker-2; order; web-02; OrderCtrl.java:148 - Order dispatched orderId=O12355 carrier=FedEx tracking=123456789012  
+2026-01-12T00:00:49.955Z | WARN | reqY7z8a9; 113115; main; auth; web-01; AuthCtrl.java:144 - Possible credential stuffing attempt  
+2026-01-12T00:00:50.400Z | ERROR | reqB0c1d2; 114116; worker-3; payment; pay-01; PaymentProc.java:265; err=E517; stack=java.lang.IllegalStateException: Amount exceeds limit - Transaction limit exceeded  
+2026-01-12T00:00:50.845Z | INFO | reqE3f4g5; 115117; main; profile; profile-01; ProfileUpd.java:157 - Updated avatar image  
+2026-01-12T00:00:51.290Z | DEBUG | reqH6i7j8; 116118; worker-1; analytics; analytics-01; Tracker.java:105 - Tracking event EVENT_ACCOUNT_DELETION userId=116118  
+2026-01-12T00:00:51.735Z | INFO | reqK9l0m1; 117119; main; auth; web-01; AuthCtrl.java:146 - User login successful (2FA)  
+2026-01-12T00:00:52.180Z | WARN | reqN2o3p4; 118120; worker-2; apiGw; gw-01; Gateway.java:178; latencyMs=3800 - High latency on service=payment  
+2026-01-12T00:00:52.625Z | ERROR | reqQ5r6s7; 119121; main; db; db-02; Database.java:180; err=E518; stack=org.postgresql.util.PSQLException: syntax error at or near "FROM" - Query syntax error  
+2026-01-12T00:00:53.070Z | INFO | reqT8u9v0; 120122; worker-3; notify; notif-01; Notifier.java:96 - Push notification opened deviceId=dev-120122  
+2026-01-12T00:00:53.515Z | DEBUG | reqW1x2y3; 121123; main; cache; cache-01; Cache.java:150 - Cache eviction due to memory pressure  
+2026-01-12T00:00:53.960Z | INFO | reqZ4a5b6; 122124; worker-1; order; web-02; OrderCtrl.java:154 - Order returned to inventory orderId=O12356  
+2026-01-12T00:00:54.405Z | WARN | reqC7d8e9; 123125; main; auth; web-01; AuthCtrl.java:148 - Suspicious IP address login attempt  
+2026-01-12T00:00:54.850Z | ERROR | reqF0g1h2; 124126; worker-2; payment; pay-01; PaymentProc.java:270; err=E519; stack=java.lang.IllegalArgumentException: Merchant not found - Invalid merchant ID  
+2026-01-12T00:00:55.295Z | INFO | reqI3j4k5; 125127; main; profile; profile-01; ProfileUpd.java:165 - Updated display name  
+2026-01-12T00:00:55.740Z | DEBUG | reqL6m7n8; 126128; worker-3; msgQueue; msg-01; Queue.java:95 - Message re‑queued id=msg-10240 reason=TransientError  
+2026-01-12T00:00:56.185Z | INFO | reqO9p0q1; 127129; main; auth; web-01; AuthCtrl.java:150 - User session extended  
+2026-01-12T00:00:56.630Z | WARN | reqR2s3t4; 128130; worker-1; apiGw; gw-01; Gateway.java:185; status=503 - Backend service returned 503 Service Unavailable  
+2026-01-12T00:00:57.075Z | ERROR | reqU5v6w7; 129131; main; storage; storage-01; FileStore.java:150; err=E520; stack=java.io.IOException: Corrupt metadata - Unable to read metadata  
+2026-01-12T00:00:57.520Z | INFO | reqX8y9z0; 130132; worker-2; notify; notif-01; Notifier.java:100 - Push notification sent to deviceId=dev-130132  
+2026-01-12T00:00:57.965Z | DEBUG | reqA1b2c3; 131133; main; cache; cache-01; Cache.java:158 - Cache cleanup completed, removed 350 entries  
+2026-01-12T00:00:58.410Z | INFO | reqD4e5f6; 132134; worker-3; order; web-02; OrderCtrl.java:160 - Order marked as fraudulent orderId=O12357  
+2026-01-12T00:00:58.855Z | WARN | reqG7h8i9; 133135; main; auth; web-01; AuthCtrl.java:152 - Multiple failed login attempts  
+2026-01-12T00:00:59.300Z | ERROR | reqJ0k1l2; 134136; worker-1; payment; pay-01; PaymentProc.java:275; err=E521; stack=java.lang.RuntimeException: Gateway rejection - Payment gateway rejected request  
+2026-01-12T00:00:59.745Z | INFO | reqM3n4o5; 135137; main; profile; profile-01; ProfileUpd.java:173 - Updated marketing opt‑in to true  
+2026-01-12T00:01:00.190Z | DEBUG | reqP6q7r8; 136138; worker-2; analytics; analytics-01; Tracker.java:110 - Tracking event EVENT_LOGIN_FAILURE userId=136138  
+2026-01-12T00:01:00.635Z | INFO | reqS9t0u1; 137139; main; auth; web-01; AuthCtrl.java:154 - User password reset completed  
+2026-01-12T00:01:01.080Z | WARN | reqV2w3x4; 138140; worker-3; apiGw; gw-01; Gateway.java:192; latencyMs=4200 - High latency on service=payment  
+2026-01-12T00:01:01.525Z | ERROR | reqY5z6a7; 139141; main; db; db-02; Database.java:190; err=E522; stack=org.postgresql.util.PSQLException: Too many connections - Connection pool exhaustion  
+2026-01-12T00:01:01.970Z | INFO | reqB8c9d0; 140142; worker-1; notify; notif-01; Notifier.java:104 - Email retry successful to user@example.com  
+2026-01-12T00:01:02.415Z | DEBUG | reqE1f2g3; 141143; main; cache; cache-01; Cache.java:166 - Added entry key=apiRateLimit:user:141143 ttl=60000  
+2026-01-12T00:01:02.860Z | INFO | reqH4i5j6; 142144; worker-2; profile; profile-01; ProfileUpd.java:181 - Updated social links  
+2026-01-12T00:01:03.305Z | WARN | reqK7l8m9; 143145; main; auth; web-01; AuthCtrl.java:156 - Multiple concurrent password reset requests  
+2026-01-12T00:01:03.750Z | ERROR | reqN0o1p2; 144146; worker-3; payment; pay-01; PaymentProc.java:280; err=E523; stack=java.lang.IllegalArgumentException: Rate out of range - Invalid exchange rate  
+2026-01-12T00:01:04.195Z | INFO | reqQ3r4s5; 145147; main; order; web-02; OrderCtrl.java:164 - Order archived orderId=O12358  
+2026-01-12T00:01:04.640Z | DEBUG | reqT6u7v8; 146148; worker-1; msgQueue; msg-01; Queue.java:105 - Message dead‑lettered id=msg-11264 reason=PoisonMessage  
+2026-01-12T00:01:05.085Z | INFO | reqW9x0y1; 147149; main; auth; web-01; AuthCtrl.java:158 - User password changed (admin)  
+2026-01-12T00:01:05.530Z | WARN | reqZ2a3b4; 148150; worker-2; apiGw; gw-01; Gateway.java:199; status=504 - Service discovery failure for service=inventory  
+2026-01-12T00:01:05.975Z | ERROR | reqC5d6e7; 149151; main; storage; storage-01; FileStore.java:160; err=E524; stack=java.io.IOException: Corrupt metadata - Unable to read metadata  
+2026-01-12T00:01:06.420Z | INFO | reqF8g9h0; 150152; worker-3; notify; notif-01; Notifier.java:108 - SMS sent to +1234567890  
+2026-01-12T00:01:06.865Z | DEBUG | reqI1j2k3; 151153; main; cache; cache-01; Cache.java:174 - Cache miss for key=product:151153  
+2026-01-12T00:01:07.310Z | INFO | reqL4m5n6; 152154; worker-1; profile; profile-01; ProfileUpd.java:189 - Updated timezone to UTC+1  
+2026-01-12T00:01:07.755Z | WARN | reqO7p8q9; 153155; main; auth; web-01; AuthCtrl.java:160 - Suspicious IP address login attempt  
+2026-01-12T00:01:08.200Z | ERROR | reqR0s1t2; 154156; worker-2; payment; pay-01; PaymentProc.java:285; err=E525; stack=java.lang.Exception: Issuer declined - Payment declined by issuer  
+2026-01-12T00:01:08.645Z | INFO | reqU3v4w5; 155157; main; order; web-02; OrderCtrl.java:170 - Order completed successfully orderId=O12359  
+2026-01-12T00:01:09.090Z | DEBUG | reqX6y7z8; 156158; worker-3; analytics; analytics-01; Tracker.java:115 - Tracking event EVENT_PROFILE_VIEW userId=156158  
+2026-01-12T00:01:09.535Z | INFO | reqA9b0c1; 157159; main; auth; web-01; AuthCtrl.java:162 - User logged in via SSO  
+2026-01-12T00:01:09.980Z | WARN | reqD2e3f4; 158160; worker-1; apiGw; gw-01; Gateway.java:206; status=429 - Rate limit exceeded for IP 192.168.1.20  
+2026-01-12T00:01:10.425Z | ERROR | reqG5h6i7; 159161; main; db; db-02; Database.java:200; err=E526; stack=org.postgresql.util.PSQLException: syntax error at or near "FROM" - Query syntax error  
+2026-01-12T00:01:10.870Z | INFO | reqJ8k9l0; 160162; worker-2; notify; notif-01; Notifier.java:112 - Email sent to support2@example.com  
+2026-01-12T00:01:11.315Z | DEBUG | reqM1n2o3; 161163; main; cache; cache-01; Cache.java:182 - Added entry key=featureFlag:newFeature ttl=86400000  
+2026-01-12T00:01:11.760Z | INFO | reqP4q5r6; 162164; worker-3; order; web-02; OrderCtrl.java:176 - Order cancelled orderId=O12360 reason=OutOfStock  
+2026-01-12T00:01:12.205Z | WARN | reqS7t8u9; 163165; main; auth; web-01; AuthCtrl.java:164 - Multiple failed OTP attempts  
+2026-01-12T00:01:12.650Z | ERROR | reqV0w1x2; 164166; worker-1; payment; pay-01; PaymentProc.java:290; err=E527; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:01:13.095Z | INFO | reqY3z4a5; 165167; main; profile; profile-01; ProfileUpd.java:197 - Updated display name  
+2026-01-12T00:01:13.540Z | DEBUG | reqB6c7d8; 166168; worker-2; msgQueue; msg-01; Queue.java:115 - Message enqueued id=msg-12345 priority=high  
+2026-01-12T00:01:13.985Z | INFO | reqE9f0g1; 167169; main; auth; web-01; AuthCtrl.java:166 - User password changed (self‑service)  
+2026-01-12T00:01:14.430Z | WARN | reqH2i3j4; 168170; worker-3; apiGw; gw-01; Gateway.java:213; latencyMs=2400 - High latency on service=inventory  
+2026-01-12T00:01:14.875Z | ERROR | reqK5l6m7; 169171; main; payment; pay-01; PaymentProc.java:295; err=E528; stack=java.lang.IllegalArgumentException: Unsupported currency - Invalid currency code  
+2026-01-12T00:01:15.320Z | INFO | reqN8o9p0; 170172; worker-1; order; web-02; OrderCtrl.java:182 - Order placed orderId=O12361  
+2026-01-12T00:01:15.765Z | DEBUG | reqQ1r2s3; 171173; main; cache; cache-01; Cache.java:190 - Cache size approaching limit currentSize=9800 maxSize=10000  
+2026-01-12T00:01:16.210Z | INFO | reqT4u5v6; 172174; worker-2; auth; web-01; AuthCtrl.java:168 - User logout (manual)  
+2026-01-12T00:01:16.655Z | WARN | reqW7x8y9; 173175; main; apiGw; gw-01; Gateway.java:220; status=502 - Backend returned 502 Bad Gateway  
+2026-01-12T00:01:17.100Z | ERROR | reqZ0a1b2; 174176; worker-3; db; db-02; Database.java:210; err=E529; stack=org.postgresql.util.PSQLException: deadlock detected - Deadlock detected during transaction  
+2026-01-12T00:01:17.545Z | INFO | reqC3d4e5; 175177; main; notify; notif-01; Notifier.java:116 - Email sent to admin3@example.com  
+2026-01-12T00:01:17.990Z | DEBUG | reqF6g7h8; 176178; worker-1; cache; cache-01; Cache.java:198 - Refreshed key=session:176178 ttl=180000  
+2026-01-12T00:01:18.435Z | INFO | reqI9j0k1; 177179; main; order; web-02; OrderCtrl.java:188 - Order payment confirmed orderId=O12362  
+2026-01-12T00:01:18.880Z | WARN | reqL2m3n4; 178180; worker-2; auth; web-01; AuthCtrl.java:170 - Suspicious login location detected  
+2026-01-12T00:01:19.325Z | ERROR | reqO5p6q7; 179181; main; payment; pay-01; PaymentProc.java:300; err=E529; stack=java.lang.Exception: Issuer declined - Payment declined  
+2026-01-12T00:01:19.770Z | INFO | reqR8s9t0; 180182; worker-3; profile; profile-01; ProfileUpd.java:204 - Updated display name  
+2026-01-12T00:01:20.215Z | DEBUG | reqU1v2w3; 181183; main; msgQueue; msg-01; Queue.java:125 - Message processed id=msg-13456  
+2026-01-12T00:01:20.660Z | INFO | reqX4y5z6; 182184; worker-1; auth; web-01; AuthCtrl.java:172 - User login successful (SSO)  
+2026-01-12T00:01:21.105Z | WARN | reqA7b8c9; 183185; main; apiGw; gw-01; Gateway.java:227; errorRate=high - High error rate from upstream services  
+2026-01-12T00:01:21.550Z | ERROR | reqD0e1f2; 184186; worker-2; db; db-02; Database.java:220; err=E530; stack=org.postgresql.util.PSQLException: Query timed out - Query timeout  
+2026-01-12T00:01:21.995Z | INFO | reqG3h4i5; 185187; main; notify; notif-01; Notifier.java:120 - Push notification sent to deviceId=dev-185187  
+2026-01-12T00:01:22.440Z | DEBUG | reqJ6k7l8; 186188; worker-3; cache; cache-01; Cache.java:206 - Added entry key=featureFlag:betaEnabled ttl=86400000  
+2026-01-12T00:01:22.885Z | INFO | reqM9n0o1; 187189; main; order; web-02; OrderCtrl.java:194 - Order returned orderId=O12363 reason=CustomerRequest  
+2026-01-12T00:01:23.330Z | WARN | reqP2q3r4; 188190; worker-1; auth; web-01; AuthCtrl.java:174 - Multiple failed login attempts  
+2026-01-12T00:01:23.775Z | ERROR | reqS5t6u7; 189191; main; payment; pay-01; PaymentProc.java:305; err=E531; stack=java.lang.IllegalArgumentException: Merchant auth failed - Invalid merchant credentials  
+2026-01-12T00:01:24.220Z | INFO | reqV8w9x0; 190192; worker-2; profile; profile-01; ProfileUpd.java:211 - Updated notification preferences  
+2026-01-12T00:01:24.665Z | DEBUG | reqY1z2a3; 191193; main; msgQueue; msg-01; Queue.java:135 - Message re‑queued id=msg-14567 reason=Timeout  
+2026-01-12T00:01:25.110Z | INFO | reqB4c5d6; 192194; worker-3; auth; web-01; AuthCtrl.java:176 - User logout (session timeout)  
+2026-01-12T00:01:25.555Z | WARN | reqE7f8g9; 193195; main; apiGw; gw-01; Gateway.java:236; latencyMs=2500 - High latency on service=payment  
+2026-01-12T00:01:26.000Z | ERROR | reqH0i1j2; 194196; worker-1; db; db-02; Database.java:230; err=E532; stack=org.postgresql.util.PSQLException: syntax error at or near "SELECT" - Query syntax error  
+2026-01-12T00:01:26.445Z | INFO | reqK3l4m5; 195197; main; notify; notif-01; Notifier.java:124 - Email bounce detected recipient=user@example.com  
+2026-01-12T00:01:26.890Z | DEBUG | reqN6o7p8; 196198; worker-2; cache; cache-01; Cache.java:214 - Added entry key=apiRateLimit:user:196198 ttl=60000  
+2026-01-12T00:01:27.335Z | INFO | reqQ9r0s1; 197199; main; order; web-02; OrderCtrl.java:200 - Order payment confirmed orderId=O12364  
+2026-01-12T00:01:27.780Z | WARN | reqT2u3v4; 198200; worker-3; auth; web-01; AuthCtrl.java:178 - Possible brute‑force attack detected  
+2026-01-12T00:01:28.225Z | ERROR | reqW5x6y7; 199201; main; payment; pay-01; PaymentProc.java:310; err=E533; stack=java.lang.Exception: Issuer declined - Payment declined  
+2026-01-12T00:01:28.670Z | INFO | reqZ8a9b0; 200202; worker-1; profile; profile-01; ProfileUpd.java:218 - Updated UI theme to "dark"  
+2026-01-12T00:01:29.115Z | DEBUG | reqC1d2e3; 201203; main; msgQueue; msg-01; Queue.java:145 - Message dead‑lettered id=msg-15678 reason=PoisonMessage  
+2026-01-12T00:01:29.560Z | INFO | reqF4g5h6; 202204; worker-2; auth; web-01; AuthCtrl.java:180 - User login successful (2FA)  
+2026-01-12T00:01:30.005Z | WARN | reqI7j8k9; 203205; main; apiGw; gw-01; Gateway.java:243; latencyMs=2600 - High latency on service=payment  
+2026-01-12T00:01:30.450Z | ERROR | reqL0m1n2; 204206; worker-3; db; db-02; Database.java:240; err=E534; stack=org.postgresql.util.PSQLException: could not serialize access due to concurrent update - Serialization failure  
+2026-01-12T00:01:30.895Z | INFO | reqO3p4q5; 205207; main; notify; notif-01; Notifier.java:128 - Push notification sent to deviceId=dev-205207  
+2026-01-12T00:01:31.340Z | DEBUG | reqR6s7t8; 206208; worker-1; cache; cache-01; Cache.java:222 - Cache cleanup started  
+2026-01-12T00:01:31.785Z | INFO | reqU9v0w1; 207209; main; order; web-02; OrderCtrl.java:206 - Order shipped orderId=O12365 carrier=DHL tracking=JD014567890130  
+2026-01-12T00:01:32.230Z | WARN | reqX2y3z4; 208210; worker-2; auth; web-01; AuthCtrl.java:182 - Multiple failed OTP attempts  
+2026-01-12T00:01:32.675Z | ERROR | reqA5b6c7; 209211; main; payment; pay-01; PaymentProc.java:315; err=E535; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:01:33.120Z | INFO | reqD8e9f0; 210212; worker-3; profile; profile-01; ProfileUpd.java:225 - Updated display name  
+2026-01-12T00:01:33.565Z | DEBUG | reqG1h2i3; 211213; main; msgQueue; msg-01; Queue.java:155 - Message acked id=msg-16789  
+2026-01-12T00:01:34.010Z | INFO | reqJ4k5l6; 212214; main; auth; web-01; AuthCtrl.java:184 - User logout (manual)  
+2026-01-12T00:01:34.455Z | WARN | reqM7n8o9; 213215; worker-1; apiGw; gw-01; Gateway.java:250; status=504 - Backend timeout for requestId=req-M7n8o9  
+2026-01-12T00:01:34.900Z | ERROR | reqP0q1r2; 214216; main; db; db-02; Database.java:250; err=E536; stack=org.postgresql.util.PSQLException: Query timed out - Query timeout  
+2026-01-12T00:01:35.345Z | INFO | reqS3t4u5; 215217; worker-2; notify; notif-01; Notifier.java:132 - Email sent to admin4@example.com  
+2026-01-12T00:01:35.790Z | DEBUG | reqV6w7x8; 216218; main; cache; cache-01; Cache.java:230 - Added entry key=featureFlag:newFeature ttl=86400000  
+2026-01-12T00:01:36.235Z | INFO | reqY9z0a1; 217219; main; order; web-02; OrderCtrl.java:212 - Order cancelled orderId=O12366 reason=CustomerRequest  
+2026-01-12T00:01:36.680Z | WARN | reqB2c3d4; 218220; worker-3; auth; web-01; AuthCtrl.java:186 - Multiple failed login attempts  
+2026-01-12T00:01:37.125Z | ERROR | reqE5f6g7; 219221; main; payment; pay-01; PaymentProc.java:320; err=E537; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:01:37.570Z | INFO | reqH8i9j0; 220222; worker-1; profile; profile-01; ProfileUpd.java:232 - Updated UI theme to "light"  
+2026-01-12T00:01:38.015Z | DEBUG | reqK1l2m3; 221223; main; msgQueue; msg-01; Queue.java:165 - Message dead‑lettered id=msg-17890 reason=PoisonMessage  
+2026-01-12T00:01:38.460Z | INFO | reqN4o5p6; 222224; main; auth; web-01; AuthCtrl.java:188 - User login successful (2FA)  
+2026-01-12T00:01:38.905Z | WARN | reqQ7r8s9; 223225; worker-2; apiGw; gw-01; Gateway.java:257; latencyMs=2700 - High latency on service=payment  
+2026-01-12T00:01:39.350Z | ERROR | reqT0u1v2; 224226; main; db; db-02; Database.java:260; err=E538; stack=org.postgresql.util.PSQLException: syntax error at or near "INSERT" - Query syntax error  
+2026-01-12T00:01:39.795Z | INFO | reqW3x4y5; 225227; worker-3; notify; notif-01; Notifier.java:136 - Push notification sent to deviceId=dev-225227  
+2026-01-12T00:01:40.240Z | DEBUG | reqZ6a7b8; 226228; main; cache; cache-01; Cache.java:238 - Cache eviction due to memory pressure  
+2026-01-12T00:01:40.685Z | INFO | reqC9d0e1; 227229; main; order; web-02; OrderCtrl.java:218 - Order shipped orderId=O12367 carrier=UPS tracking=1Z999DD10123456795  
+2026-01-12T00:01:41.130Z | WARN | reqF2g3h4; 228230; worker-1; auth; web-01; AuthCtrl.java:190 - Possible credential stuffing attempt  
+2026-01-12T00:01:41.575Z | ERROR | reqI5j6k7; 229231; main; payment; pay-01; PaymentProc.java:325; err=E539; stack=java.lang.IllegalArgumentException: Unsupported currency - Invalid currency code  
+2026-01-12T00:01:42.020Z | INFO | reqL8m9n0; 230232; worker-2; profile; profile-01; ProfileUpd.java:239 - Updated display name  
+2026-01-12T00:01:42.465Z | DEBUG | reqO1p2q3; 231233; main; msgQueue; msg-01; Queue.java:175 - Message acked id=msg-18901  
+2026-01-12T00:01:42.910Z | INFO | reqR4s5t6; 232234; main; auth; web-01; AuthCtrl.java:192 - User password reset completed  
+2026-01-12T00:01:43.355Z | WARN | reqU7v8w9; 233235; worker-3; apiGw; gw-01; Gateway.java:264; latencyMs=2800 - High latency on service=inventory  
+2026-01-12T00:01:43.800Z | ERROR | reqX0y1z2; 234236; main; storage; storage-01; FileStore.java:270; err=E540; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:01:44.245Z | INFO | reqA3b4c5; 235237; worker-1; notify; notif-01; Notifier.java:140 - Email delivered to user235237@example.com  
+2026-01-12T00:01:44.690Z | DEBUG | reqD6e7f8; 236238; main; cache; cache-01; Cache.java:246 - Added entry key=apiRateLimit:user:236238 ttl=60000  
+2026-01-12T00:01:45.135Z | INFO | reqG9h0i1; 237239; main; order; web-02; OrderCtrl.java:224 - Order payment confirmed orderId=O12368  
+2026-01-12T00:01:45.580Z | WARN | reqJ2k3l4; 238240; worker-2; auth; web-01; AuthCtrl.java:194 - Multiple failed login attempts  
+2026-01-12T00:01:46.025Z | ERROR | reqM5n6o7; 239241; main; payment; pay-01; PaymentProc.java:330; err=E541; stack=java.lang.RuntimeException: Gateway internal error - Payment gateway internal error  
+2026-01-12T00:01:46.470Z | INFO | reqP8q9r0; 240242; worker-3; profile; profile-01; ProfileUpd.java:246 - Updated timezone to UTC+2  
+2026-01-12T00:01:46.915Z | DEBUG | reqS1t2u3; 241243; main; msgQueue; msg-01; Queue.java:185 - Message dead‑lettered id=msg-20012 reason=PoisonMessage  
+2026-01-12T00:01:47.360Z | INFO | reqV4w5x6; 242244; main; auth; web-01; AuthCtrl.java:196 - User login successful (2FA)  
+2026-01-12T00:01:47.805Z | WARN | reqY7z8a9; 243245; worker-1; apiGw; gw-01; Gateway.java:271; latencyMs=2900 - High latency on service=payment  
+2026-01-12T00:01:48.250Z | ERROR | reqB0c1d2; 244246; main; db; db-02; Database.java:270; err=E542; stack=org.postgresql.util.PSQLException: could not serialize access due to concurrent update - Serialization failure  
+2026-01-12T00:01:48.695Z | INFO | reqE3f4g5; 245247; worker-2; notify; notif-01; Notifier.java:144 - Push notification sent to deviceId=dev-245247  
+2026-01-12T00:01:49.140Z | DEBUG | reqH6i7j8; 246248; main; cache; cache-01; Cache.java:254 - Cache cleanup started  
+2026-01-12T00:01:49.585Z | INFO | reqK9l0m1; 247249; main; order; web-02; OrderCtrl.java:230 - Order shipped orderId=O12369 carrier=FedEx tracking=123456789016  
+2026-01-12T00:01:50.030Z | WARN | reqN2o3p4; 248250; worker-3; auth; web-01; AuthCtrl.java:198 - Possible brute‑force attack detected  
+2026-01-12T00:01:50.475Z | ERROR | reqQ5r6s7; 249251; main; payment; pay-01; PaymentProc.java:335; err=E543; stack=java.lang.IllegalArgumentException: Unsupported method - Invalid payment method  
+2026-01-12T00:01:50.920Z | INFO | reqT8u9v0; 250252; worker-1; profile; profile-01; ProfileUpd.java:253 - Updated preferred contact method to "push"  
+2026-01-12T00:01:51.365Z | DEBUG | reqW1x2y3; 251253; main; msgQueue; msg-01; Queue.java:195 - Message re‑queued id=msg-21123 reason=TransientError  
+2026-01-12T00:01:51.810Z | INFO | reqZ4a5b6; 252254; main; auth; web-01; AuthCtrl.java:200 - User password changed (self‑service)  
+2026-01-12T00:01:52.255Z | WARN | reqC7d8e9; 253255; worker-2; apiGw; gw-01; Gateway.java:278; latencyMs=3000 - High latency on service=inventory  
+2026-01-12T00:01:52.700Z | ERROR | reqF0g1h2; 254256; main; storage; storage-01; FileStore.java:280; err=E544; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:01:53.145Z | INFO | reqI3j4k5; 255257; worker-3; notify; notif-01; Notifier.java:148 - Email delivered to admin5@example.com  
+2026-01-12T00:01:53.590Z | DEBUG | reqL6m7n8; 256258; main; cache; cache-01; Cache.java:262 - Added entry key=apiRateLimit:user:256258 ttl=60000  
+2026-01-12T00:01:54.035Z | INFO | reqO9p0q1; 257259; main; order; web-02; OrderCtrl.java:236 - Order payment confirmed orderId=O12370  
+2026-01-12T00:01:54.480Z | WARN | reqR2s3t4; 258260; worker-1; auth; web-01; AuthCtrl.java:202 - Multiple failed login attempts  
+2026-01-12T00:01:54.925Z | ERROR | reqU5v6w7; 259261; main; payment; pay-01; PaymentProc.java:340; err=E545; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:01:55.370Z | INFO | reqX8y9z0; 260262; worker-2; profile; profile-01; ProfileUpd.java:260 - Updated display name  
+2026-01-12T00:01:55.815Z | DEBUG | reqA1b2c3; 261263; main; msgQueue; msg-01; Queue.java:205 - Message dead‑lettered id=msg-22234 reason=PoisonMessage
+2026-01-12T00:01:56.260Z | INFO | reqD4e5f6; 262264; main; auth; web-01; AuthCtrl.java:204 - User logout (session timeout)  
+2026-01-12T00:01:56.705Z | WARN | reqG7h8i9; 263265; worker-3; apiGw; gw-01; Gateway.java:285; latencyMs=3100 - High latency on service=payment  
+2026-01-12T00:01:57.150Z | ERROR | reqJ0k1l2; 264266; main; storage; storage-01; FileStore.java:290; err=E546; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:01:57.595Z | INFO | reqM3n4o5; 265267; worker-1; notify; notif-01; Notifier.java:152 - Email sent to user265267@example.com  
+2026-01-12T00:01:58.040Z | DEBUG | reqP6q7r8; 266268; main; cache; cache-01; Cache.java:270 - Added entry key=featureFlag:newFeature ttl=86400000  
+2026-01-12T00:01:58.485Z | INFO | reqS9t0u1; 267269; main; order; web-02; OrderCtrl.java:242 - Order shipped orderId=O12371 carrier=UPS tracking=1Z999EE10123456796  
+2026-01-12T00:01:58.930Z | WARN | reqV2w3x4; 268270; worker-2; auth; web-01; AuthCtrl.java:206 - Multiple failed OTP attempts  
+2026-01-12T00:01:59.375Z | ERROR | reqY5z6a7; 269271; main; payment; pay-01; PaymentProc.java:345; err=E547; stack=java.lang.IllegalArgumentException: Merchant not found - Invalid merchant ID  
+2026-01-12T00:01:59.820Z | INFO | reqB8c9d0; 270272; worker-3; profile; profile-01; ProfileUpd.java:267 - Updated timezone to UTC+3  
+2026-01-12T00:02:00.265Z | DEBUG | reqE1f2g3; 271273; main; msgQueue; msg-01; Queue.java:215 - Message acked id=msg-23345  
+2026-01-12T00:02:00.710Z | INFO | reqH4i5j6; 272274; main; auth; web-01; AuthCtrl.java:208 - User login successful (2FA)  
+2026-01-12T00:02:01.155Z | WARN | reqK7l8m9; 273275; worker-1; apiGw; gw-01; Gateway.java:292; latencyMs=3200 - High latency on service=inventory  
+2026-01-12T00:02:01.600Z | ERROR | reqN0o1p2; 274276; main; db; db-02; Database.java:300; err=E548; stack=org.postgresql.util.PSQLException: syntax error at or near "DELETE" - Query syntax error  
+2026-01-12T00:02:02.045Z | INFO | reqQ3r4s5; 275277; worker-2; notify; notif-01; Notifier.java:156 - Push notification sent to deviceId=dev-275277  
+2026-01-12T00:02:02.490Z | DEBUG | reqT6u7v8; 276278; main; cache; cache-01; Cache.java:278 - Added entry key=apiRateLimit:user:276278 ttl=60000  
+2026-01-12T00:02:02.935Z | INFO | reqW9x0y1; 277279; main; order; web-02; OrderCtrl.java:248 - Order cancelled orderId=O12372 reason=OutOfStock  
+2026-01-12T00:02:03.380Z | WARN | reqZ2a3b4; 278280; worker-3; auth; web-01; AuthCtrl.java:210 - Multiple failed login attempts  
+2026-01-12T00:02:03.825Z | ERROR | reqC5d6e7; 279281; main; payment; pay-01; PaymentProc.java:350; err=E549; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:02:04.270Z | INFO | reqF8g9h0; 280282; worker-1; profile; profile-01; ProfileUpd.java:274 - Updated UI theme to "dark"  
+2026-01-12T00:02:04.715Z | DEBUG | reqI1j2k3; 281283; main; msgQueue; msg-01; Queue.java:225 - Message dead‑lettered id=msg-24456 reason=PoisonMessage  
+2026-01-12T00:02:05.160Z | INFO | reqL4m5n6; 282284; main; auth; web-01; AuthCtrl.java:212 - User logout (manual)  
+2026-01-12T00:02:05.605Z | WARN | reqO7p8q9; 283285; worker-2; apiGw; gw-01; Gateway.java:299; latencyMs=3300 - High latency on service=payment  
+2026-01-12T00:02:06.050Z | ERROR | reqR0s1t2; 284286; main; storage; storage-01; FileStore.java:300; err=E550; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:06.495Z | INFO | reqU3v4w5; 285287; worker-3; notify; notif-01; Notifier.java:160 - Email sent to admin6@example.com  
+2026-01-12T00:02:06.940Z | DEBUG | reqX6y7z8; 286288; main; cache; cache-01; Cache.java:286 - Added entry key=featureFlag:newFeature ttl=86400000  
+2026-01-12T00:02:07.385Z | INFO | reqA9b0c1; 287289; main; order; web-02; OrderCtrl.java:254 - Order shipped orderId=O12373 carrier=DHL tracking=JD014567890131  
+2026-01-12T00:02:07.830Z | WARN | reqD2e3f4; 288290; worker-1; auth; web-01; AuthCtrl.java:214 - Possible brute‑force attack detected  
+2026-01-12T00:02:08.275Z | ERROR | reqG5h6i7; 289291; main; payment; pay-01; PaymentProc.java:355; err=E551; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:02:08.720Z | INFO | reqJ8k9l0; 290292; worker-2; profile; profile-01; ProfileUpd.java:281 - Updated display name  
+2026-01-12T00:02:09.165Z | DEBUG | reqM1n2o3; 291293; main; msgQueue; msg-01; Queue.java:235 - Message processed id=msg-25567  
+2026-01-12T00:02:09.610Z | INFO | reqP4q5r6; 292294; main; auth; web-01; AuthCtrl.java:216 - User logout (session timeout)  
+2026-01-12T00:02:10.055Z | WARN | reqS7t8u9; 293295; worker-3; apiGw; gw-01; Gateway.java:306; latencyMs=3400 - High latency on service=inventory  
+2026-01-12T00:02:10.500Z | ERROR | reqV0w1x2; 294296; main; storage; storage-01; FileStore.java:310; err=E552; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:10.945Z | INFO | reqY3z4a5; 295297; worker-1; notify; notif-01; Notifier.java:164 - Email delivered to user295297@example.com  
+2026-01-12T00:02:11.390Z | DEBUG | reqB6c7d8; 296298; main; cache; cache-01; Cache.java:294 - Added entry key=apiRateLimit:user:296298 ttl=60000  
+2026-01-12T00:02:11.835Z | INFO | reqE9f0g1; 297299; main; order; web-02; OrderCtrl.java:260 - Order cancelled orderId=O12374 reason=CustomerRequest  
+2026-01-12T00:02:12.280Z | WARN | reqH2i3j4; 298300; worker-2; auth; web-01; AuthCtrl.java:218 - Multiple failed login attempts  
+2026-01-12T00:02:12.725Z | ERROR | reqK5l6m7; 299301; main; payment; pay-01; PaymentProc.java:360; err=E553; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:02:13.170Z | INFO | reqN8o9p0; 300302; worker-3; profile; profile-01; ProfileUpd.java:288 - Updated UI theme to "light"  
+2026-01-12T00:02:13.615Z | DEBUG | reqQ1r2s3; 301303; main; msgQueue; msg-01; Queue.java:245 - Message dead‑lettered id=msg-26678 reason=PoisonMessage  
+2026-01-12T00:02:14.060Z | INFO | reqT4u5v6; 302304; main; auth; web-01; AuthCtrl.java:220 - User password changed (admin)  
+2026-01-12T00:02:14.505Z | WARN | reqW7x8y9; 303305; worker-1; apiGw; gw-01; Gateway.java:313; latencyMs=3500 - High latency on service=payment  
+2026-01-12T00:02:14.950Z | ERROR | reqZ0a1b2; 304306; main; storage; storage-01; FileStore.java:320; err=E554; stack=java.io.IOException: Compression failed - Unable to compress file  
+2026-01-12T00:02:15.395Z | INFO | reqC3d4e5; 305307; worker-2; notify; notif-01; Notifier.java:168 - Push notification sent to deviceId=dev-305307  
+2026-01-12T00:02:15.840Z | DEBUG | reqF6g7h8; 306308; main; cache; cache-01; Cache.java:302 - Added entry key=apiRateLimit:user:306308 ttl=60000  
+2026-01-12T00:02:16.285Z | INFO | reqI9j0k1; 307309; main; order; web-02; OrderCtrl.java:266 - Order shipped orderId=O12375 carrier=UPS tracking=1Z999FF10123456797  
+2026-01-12T00:02:16.730Z | WARN | reqL2m3n4; 308310; worker-3; auth; web-01; AuthCtrl.java:222 - Possible credential stuffing attempt  
+2026-01-12T00:02:17.175Z | ERROR | reqO5p6q7; 309311; main; payment; pay-01; PaymentProc.java:365; err=E555; stack=java.lang.IllegalArgumentException: Unsupported currency - Invalid currency code  
+2026-01-12T00:02:17.620Z | INFO | reqR8s9t0; 310312; worker-1; profile; profile-01; ProfileUpd.java:295 - Updated display name  
+2026-01-12T00:02:18.065Z | DEBUG | reqU1v2w3; 311313; main; msgQueue; msg-01; Queue.java:255 - Message acked id=msg-27789  
+2026-01-12T00:02:18.510Z | INFO | reqX4y5z6; 312314; main; auth; web-01; AuthCtrl.java:224 - User logout (manual)  
+2026-01-12T00:02:18.955Z | WARN | reqA7b8c9; 313315; worker-2; apiGw; gw-01; Gateway.java:320; latencyMs=3600 - High latency on service=inventory  
+2026-01-12T00:02:19.400Z | ERROR | reqD0e1f2; 314316; main; storage; storage-01; FileStore.java:330; err=E556; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:19.845Z | INFO | reqG3h4i5; 315317; worker-3; notify; notif-01; Notifier.java:172 - Email delivered to admin7@example.com  
+2026-01-12T00:02:20.290Z | DEBUG | reqJ6k7l8; 316318; main; cache; cache-01; Cache.java:310 - Added entry key=apiRateLimit:user:316318 ttl=60000  
+2026-01-12T00:02:20.735Z | INFO | reqM9n0o1; 317319; main; order; web-02; OrderCtrl.java:272 - Order payment confirmed orderId=O12376  
+2026-01-12T00:02:21.180Z | WARN | reqP2q3r4; 318320; worker-1; auth; web-01; AuthCtrl.java:226 - Multiple failed OTP attempts  
+2026-01-12T00:02:21.625Z | ERROR | reqS5t6u7; 319321; main; payment; pay-01; PaymentProc.java:370; err=E557; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:02:22.070Z | INFO | reqV8w9x0; 320322; worker-2; profile; profile-01; ProfileUpd.java:302 - Updated timezone to UTC+4  
+2026-01-12T00:02:22.515Z | DEBUG | reqY1z2a3; 321323; main; msgQueue; msg-01; Queue.java:265 - Message dead‑lettered id=msg-28890 reason=PoisonMessage  
+2026-01-12T00:02:22.960Z | INFO | reqB4c5d6; 322324; main; auth; web-01; AuthCtrl.java:228 - User login successful (2FA)  
+2026-01-12T00:02:23.405Z | WARN | reqE7f8g9; 323325; worker-3; apiGw; gw-01; Gateway.java:327; latencyMs=3700 - High latency on service=payment  
+2026-01-12T00:02:23.850Z | ERROR | reqH0i1j2; 324326; main; storage; storage-01; FileStore.java:340; err=E558; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:24.295Z | INFO | reqK3l4m5; 325327; worker-1; notify; notif-01; Notifier.java:176 - Email sent to user325327@example.com  
+2026-01-12T00:02:24.740Z | DEBUG | reqN6o7p8; 326328; main; cache; cache-01; Cache.java:318 - Added entry key=apiRateLimit:user:326328 ttl=60000  
+2026-01-12T00:02:25.185Z | INFO | reqQ9r0s1; 327329; main; order; web-02; OrderCtrl.java:278 - Order shipped orderId=O12377 carrier=DHL tracking=JD014567890132  
+2026-01-12T00:02:25.630Z | WARN | reqT2u3v4; 328330; worker-2; auth; web-01; AuthCtrl.java:230 - Possible brute‑force attack detected  
+2026-01-12T00:02:26.075Z | ERROR | reqW5x6y7; 329331; main; payment; pay-01; PaymentProc.java:375; err=E559; stack=java.lang.IllegalArgumentException: Unsupported method - Invalid payment method  
+2026-01-12T00:02:26.520Z | INFO | reqZ8a9b0; 330332; worker-3; profile; profile-01; ProfileUpd.java:309 - Updated UI theme to "dark"  
+2026-01-12T00:02:26.965Z | DEBUG | reqC1d2e3; 331333; main; msgQueue; msg-01; Queue.java:275 - Message acked id=msg-29901  
+2026-01-12T00:02:27.410Z | INFO | reqF4g5h6; 332334; main; auth; web-01; AuthCtrl.java:232 - User password reset completed  
+2026-01-12T00:02:27.855Z | WARN | reqI7j8k9; 333335; worker-1; apiGw; gw-01; Gateway.java:334; latencyMs=3800 - High latency on service=inventory  
+2026-01-12T00:02:28.300Z | ERROR | reqL0m1n2; 334336; main; storage; storage-01; FileStore.java:350; err=E560; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:28.745Z | INFO | reqO3p4q5; 335337; worker-2; notify; notif-01; Notifier.java:180 - Push notification sent to deviceId=dev-335337  
+2026-01-12T00:02:29.190Z | DEBUG | reqR6s7t8; 336338; main; cache; cache-01; Cache.java:326 - Added entry key=apiRateLimit:user:336338 ttl=60000  
+2026-01-12T00:02:29.635Z | INFO | reqU9v0w1; 337339; main; order; web-02; OrderCtrl.java:284 - Order cancelled orderId=O12378 reason=CustomerRequest  
+2026-01-12T00:02:30.080Z | WARN | reqX2y3z4; 338340; worker-3; auth; web-01; AuthCtrl.java:234 - Multiple failed login attempts  
+2026-01-12T00:02:30.525Z | ERROR | reqA5b6c7; 339341; main; payment; pay-01; PaymentProc.java:380; err=E561; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:02:30.970Z | INFO | reqD8e9f0; 340342; worker-1; profile; profile-01; ProfileUpd.java=316 - Updated display name  
+2026-01-12T00:02:31.415Z | DEBUG | reqG1h2i3; 341343; main; msgQueue; msg-01; Queue.java=285 - Message dead‑lettered id=msg-31012 reason=PoisonMessage  
+2026-01-12T00:02:31.860Z | INFO | reqJ4k5l6; 342344; main; auth; web-01; AuthCtrl.java=236 - User password changed (admin)  
+2026-01-12T00:02:32.305Z | WARN | reqM7n8o9; 343345; worker-2; apiGw; gw-01; Gateway.java=341; latencyMs=3900 - High latency on service=payment  
+2026-01-12T00:02:32.750Z | ERROR | reqP0q1r2; 344346; main; storage; storage-01; FileStore.java=360; err=E562; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:33.195Z | INFO | reqS3t4u5; 345347; worker-3; notify; notif-01; Notifier.java=184 - Email sent to admin8@example.com  
+2026-01-12T00:02:33.640Z | DEBUG | reqV6w7x8; 346348; main; cache; cache-01; Cache.java=334 - Added entry key=apiRateLimit:user:346348 ttl=60000  
+2026-01-12T00:02:34.085Z | INFO | reqY9z0a1; 347349; main; order; web-02; OrderCtrl.java=290 - Order shipped orderId=O12379 carrier=UPS tracking=1Z999JJ10123456799  
+2026-01-12T00:02:34.530Z | WARN | reqC2d3e4; 348350; worker-1; auth; web-01; AuthCtrl.java=238 - Possible credential stuffing attempt  
+2026-01-12T00:02:34.975Z | ERROR | reqF5g6h7; 349351; main; payment; pay-01; PaymentProc.java=385; err=E563; stack=java.lang.IllegalArgumentException: Rate out of range - Invalid exchange rate  
+2026-01-12T00:02:35.420Z | INFO | reqI8j9k0; 350352; worker-2; profile; profile-01; ProfileUpd.java=323 - Updated timezone to UTC+5  
+2026-01-12T00:02:35.865Z | DEBUG | reqL1m2n3; 351353; main; msgQueue; msg-01; Queue.java=295 - Message acked id=msg-32123  
+2026-01-12T00:02:36.310Z | INFO | reqO4p5q6; 352354; main; auth; web-01; AuthCtrl.java=240 - User logout (manual)  
+2026-01-12T00:02:36.755Z | WARN | reqR7s8t9; 353355; worker-3; apiGw; gw-01; Gateway.java=348; latencyMs=4000 - High latency on service=inventory  
+2026-01-12T00:02:37.200Z | ERROR | reqU0v1w2; 354356; main; storage; storage-01; FileStore.java=370; err=E564; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:37.645Z | INFO | reqX3y4z5; 355357; worker-1; notify; notif-01; Notifier.java=188 - Push notification sent to deviceId=dev-355357  
+2026-01-12T00:02:38.090Z | DEBUG | reqA6b7c8; 356358; main; cache; cache-01; Cache.java=342 - Added entry key=apiRateLimit:user:356358 ttl=60000  
+2026-01-12T00:02:38.535Z | INFO | reqD9e0f1; 357359; main; order; web-02; OrderCtrl.java=296 - Order cancelled orderId=O12380 reason=OutOfStock  
+2026-01-12T00:02:38.980Z | WARN | reqG2h3i4; 358360; worker-2; auth; web-01; AuthCtrl.java=242 - Multiple failed login attempts  
+2026-01-12T00:02:39.425Z | ERROR | reqJ5k6l7; 359361; main; payment; pay-01; PaymentProc.java=395; err=E565; stack=java.lang.Exception: Issuer declined - Payment declined  
+2026-01-12T00:02:39.870Z | INFO | reqM8n9o0; 360362; worker-3; profile; profile-01; ProfileUpd.java=330 - Updated display name  
+2026-01-12T00:02:40.315Z | DEBUG | reqP1q2r3; 361363; main; msgQueue; msg-01; Queue.java=305 - Message processed id=msg-33234  
+2026-01-12T00:02:40.760Z | INFO | reqS4t5u6; 362364; main; auth; web-01; AuthCtrl.java=244 - User password reset completed  
+2026-01-12T00:02:41.205Z | WARN | reqV7w8x9; 363365; worker-1; apiGw; gw-01; Gateway.java=355; latencyMs=4100 - High latency on service=payment  
+2026-01-12T00:02:41.650Z | ERROR | reqY0z1a2; 364366; main; storage; storage-01; FileStore.java=380; err=E566; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:42.095Z | INFO | reqC3d4e5; 365367; worker-2; notify; notif-01; Notifier.java=192 - Email delivered to admin9@example.com  
+2026-01-12T00:02:42.540Z | DEBUG | reqF6g7h8; 366368; main; cache; cache-01; Cache.java=350 - Added entry key=apiRateLimit:user:366368 ttl=60000  
+2026-01-12T00:02:42.985Z | INFO | reqI9j0k1; 367369; main; order; web-02; OrderCtrl.java=302 - Order shipped orderId=O12381 carrier=UPS tracking=1Z999KK10123456800  
+2026-01-12T00:02:43.430Z | WARN | reqL2m3n4; 368370; worker-3; auth; web-01; AuthCtrl.java=246 - Possible credential stuffing attempt  
+2026-01-12T00:02:43.875Z | ERROR | reqO5p6q7; 369371; main; payment; pay-01; PaymentProc.java=405; err=E567; stack=java.lang.IllegalArgumentException: Unsupported currency - Invalid currency code  
+2026-01-12T00:02:44.320Z | INFO | reqR8s9t0; 370372; worker-1; profile; profile-01; ProfileUpd.java=337 - Updated timezone to UTC+6  
+2026-01-12T00:02:44.765Z | DEBUG | reqU1v2w3; 371373; main; msgQueue; msg-01; Queue.java=315 - Message dead‑lettered id=msg-34345 reason=PoisonMessage  
+2026-01-12T00:02:45.210Z | INFO | reqX4y5z6; 372374; main; auth; web-01; AuthCtrl.java=248 - User password changed (self‑service)  
+2026-01-12T00:02:45.655Z | WARN | reqA7b8c9; 373375; worker-2; apiGw; gw-01; Gateway.java=362; latencyMs=4200 - High latency on service=inventory  
+2026-01-12T00:02:46.100Z | ERROR | reqD0e1f2; 374376; main; storage; storage-01; FileStore.java=390; err=E568; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:46.545Z | INFO | reqG3h4i5; 375377; worker-3; notify; notif-01; Notifier.java=196 - Push notification sent to deviceId=dev-375377  
+2026-01-12T00:02:46.990Z | DEBUG | reqJ6k7l8; 376378; main; cache; cache-01; Cache.java=358 - Added entry key=apiRateLimit:user:376378 ttl=60000  
+2026-01-12T00:02:47.435Z | INFO | reqM9n0o1; 377379; main; order; web-02; OrderCtrl.java=308 - Order cancelled orderId=O12382 reason=OutOfStock  
+2026-01-12T00:02:47.880Z | WARN | reqP2q3r4; 378380; worker-1; auth; web-01; AuthCtrl.java=250 - Multiple failed OTP attempts  
+2026-01-12T00:02:48.325Z | ERROR | reqS5t6u7; 379381; main; payment; pay-01; PaymentProc.java=415; err=E569; stack=java.lang.IllegalArgumentException: Refund exceeds original amount - Invalid refund amount  
+2026-01-12T00:02:48.770Z | INFO | reqV8w9x0; 380382; worker-2; profile; profile-01; ProfileUpd.java=344 - Updated display name  
+2026-01-12T00:02:49.215Z | DEBUG | reqY1z2a3; 381383; main; msgQueue; msg-01; Queue.java=325 - Message acked id=msg-35456  
+2026-01-12T00:02:49.660Z | INFO | reqB4c5d6; 382384; main; auth; web-01; AuthCtrl.java=252 - User logout (session timeout)  
+2026-01-12T00:02:50.105Z | WARN | reqE7f8g9; 383385; worker-3; apiGw; gw-01; Gateway.java=369; latencyMs=4300 - High latency on service=payment  
+2026-01-12T00:02:50.550Z | ERROR | reqH0i1j2; 384386; main; storage; storage-01; FileStore.java=400; err=E570; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:50.995Z | INFO | reqK3l4m5; 385387; worker-1; notify; notif-01; Notifier.java=200 - Email sent to admin10@example.com  
+2026-01-12T00:02:51.440Z | DEBUG | reqN6o7p8; 386388; main; cache; cache-01; Cache.java=366 - Added entry key=apiRateLimit:user:386388 ttl=60000  
+2026-01-12T00:02:51.885Z | INFO | reqQ9r0s1; 387389; main; order; web-02; OrderCtrl.java=314 - Order shipped orderId=O12383 carrier=DHL tracking=JD014567890133  
+2026-01-12T00:02:52.330Z | WARN | reqT2u3v4; 388390; worker-2; auth; web-01; AuthCtrl.java=254 - Multiple failed login attempts  
+2026-01-12T00:02:52.775Z | ERROR | reqW5x6y7; 389391; main; payment; pay-01; PaymentProc.java=425; err=E571; stack=java.lang.IllegalArgumentException: Unsupported method - Invalid payment method  
+2026-01-12T00:02:53.220Z | INFO | reqZ8a9b0; 390392; worker-3; profile; profile-01; ProfileUpd.java=351 - Updated UI theme to "dark"  
+2026-01-12T00:02:53.665Z | DEBUG | reqC1d2e3; 391393; main; msgQueue; msg-01; Queue.java=335 - Message dead‑lettered id=msg-36567 reason=PoisonMessage  
+2026-01-12T00:02:54.110Z | INFO | reqF4g5h6; 392394; main; auth; web-01; AuthCtrl.java=256 - User password changed (admin)  
+2026-01-12T00:02:54.555Z | WARN | reqI9j0k1; 393395; worker-1; apiGw; gw-01; Gateway.java=376; latencyMs=4400 - High latency on service=inventory  
+2026-01-12T00:02:55.000Z | ERROR | reqL2m3n4; 394396; main; storage; storage-01; FileStore.java=410; err=E572; stack=java.io.IOException: Permission denied - Unable to delete file  
+2026-01-12T00:02:55.445Z | INFO | reqO5p6q7; 395397; worker-2; notify; notif-01; Notifier.java=204 - Push notification sent to deviceId=dev-395397  
+2026-01-12T00:02:55.890Z | DEBUG | reqR8s9t0; 396398; main; cache; cache-01; Cache.java=374 - Added entry key=apiRateLimit:user:396398 ttl=60000  
+2026-01-12T00:02:56.335Z | INFO | reqU1v2w3; 397399; main; order; web-02; OrderCtrl.java=320 - Order cancelled orderId=O12384 reason=CustomerRequest  
+2026-01-12T00:02:56.780Z | WARN | reqX4y5z6; 398400; worker-3; auth; web-01; AuthCtrl.java=258 - Possible credential stuffing attempt  
+2026-01-12T00:02:57.225Z | ERROR | reqA7b8c9; 399401; main; payment; pay-01; PaymentProc.java=435; err=E573; stack=java.lang.IllegalArgumentException: CVV format invalid - Invalid CVV  
+2026-01-12T00:02:57.670Z | INFO | reqD0e1f2; 400402; worker-1; profile; profile-01; ProfileUpd.java=358 - Updated display
